@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream - Youtube</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>.esconder{display:;}</style>
+
+     <script>
+       !function(f,b,e,v,n,t,s)
+       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+       n.queue=[];t=b.createElement(e);t.async=!0;
+       t.src=v;s=b.getElementsByTagName(e)[0];
+       s.parentNode.insertBefore(t,s)}(window, document,'script',
+       'https://connect.facebook.net/en_US/fbevents.js');
+       fbq('init', '392496843577678');
+       fbq('track', 'ViewContent');
+       </script>
+       <noscript><img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=392496843577678&ev=ViewContent&noscript=1"/>
+       </noscript>
+       
+       <!-- RedTrack -->
+       <script type="text/javascript" src="https://rt.bloodsugarcare.online/track.js"></script>
+       <!-- END RT -->
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <div class="youtube-logo">
+                <img style="max-width:95px;width: 100%;" src="img/logo2.png">
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Pesquisar" id="searchInput">
+                <button class="keyboard-btn" id="keyboardBtn" title="Ferramentas de entrada">
+                    <i class="fas fa-keyboard"></i>
+                </button>
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button class="voice-search-btn" id="voiceSearchBtn" title="Pesquisar por voz">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+        <div class="header-right">
+            <button class="create-btn" id="createBtn">
+                <i class="fas fa-plus"></i>
+                <span class="create-text">Create</span>
+            </button>
+            <button class="notifications-btn" id="notificationsBtn" title="Notificações">
+                <i class="far fa-bell"></i>
+                <span class="notification-badge">2</span>
+            </button>
+            <button class="mobile-search-btn" id="mobileSearchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="video-section">
+            <div class="video-container">
+
+                <!-- VSL VTURB -->
+                <vturb-smartplayer id="vid-685becd66b8baf338be1b714" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/bf3f4bad-0141-41d4-9901-1fd62546db6f/players/685becd66b8baf338be1b714/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+
+                <!--
+                <div class="live-indicator">
+                    <span class="live-badge">AO VIVO</span>
+                    <span class="viewer-count"><span id="viewerCount">1,783</span> assistindo</span>
+                </div>
+                -->
+            </div>
+
+            <div class="video-info">
+                <h1 class="video-title">What Happens to Your Body When You Do This Red Gelatin Trick for RAPID Weight Loss</h1>
+                
+                <div class="channel-info">
+                    <div class="channel-left">
+                        <img src="img/img.jpg?height=40&width=40" alt="Dr. Angela Torres" class="channel-avatar">
+                        <div class="channel-details">
+                            <h3 class="channel-name">Dr. Eric Berg DC
+                            </h3>
+                            <span class="subscriber-count">14.2 mi subscribers</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="subscribe-btn" id="subscribeBtn">
+                                <i class="fas fa-bell"></i>
+                                Subscribe
+                            </button>
+                            <div class="like-dislike">
+                                <button class="like-btn" id="likeBtn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span id="likeCount">1.7K</span>
+                                </button>
+                                <button class="dislike-btn" id="dislikeBtn">
+                                    <i class="fas fa-thumbs-down"></i>
+                                </button>
+                            </div>
+                            <button class="action-btn" id="shareBtn">
+                                <i class="fas fa-share"></i>
+                                Share
+                            </button>
+                            <button class="action-btn" id="saveBtn">
+                                <i class="fas fa-bookmark"></i>
+                                Save
+                            </button>
+                            <button class="action-btn clip-btn" id="clipBtn">
+                                <i class="fas fa-cut"></i>
+                                Clip
+                            </button>
+                            <button class="action-btn menu-btn" id="menuBtn">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-section" id="chatSection" style="display: none;">
+            <div class="chat-header">
+                <h3>Live Chat</h3>
+                <span class="chat-viewer-count"><span id="chatViewerCount">101,783</span> watching</span>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be added here by JavaScript -->
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Say something...">
+                <button id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <div class="btn-quiz-container esconder">
+        <button class="btn-quiz" id="openQuizModal">
+            <span class="btn-quiz-text">Get your personalized REDUBURN formula</span>
+            <i class="fas fa-arrow-right btn-quiz-icon"></i>
+        </button>
+    </div>
+
+    <!-- Modal do Quiz -->
+    <div id="quizModal" class="quiz-modal esconder">
+        <div class="quiz-modal-overlay" id="quizModalOverlay"></div>
+        <div class="quiz-modal-content">
+            <div class="quiz-header">
+                <h1 class="quiz-title">Find Your Ideal REDUBURN Formula</h1>
+                <p class="quiz-subtitle">Answer these quick questions to craft a powerful, customized solution—perfectly aligned with your body, your goals, and your lifestyle.</p>
+                <p class="quiz-subtitle">Get ready for results you'll see and feel!</p>
+            </div>
+
+            <div class="quiz-questions-container">
+                <!-- Pergunta 1 -->
+                <div class="question-step active" data-question="1">
+                    <div class="question-box">How old are you?</div>
+                    <button class="btn-option">Less than 20 years old</button>
+                    <button class="btn-option">20 to 29 years old</button>
+                    <button class="btn-option">30 to 39 years old</button>
+                    <button class="btn-option">40 to 49 years old</button>
+                    <button class="btn-option">50 to 59 years old</button>
+                    <button class="btn-option">60 years old or more</button>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="question-step" data-question="2">
+                    <div class="question-box">What's your current weight?</div>
+                    <button class="btn-option">Less than 120 lbs</button>
+                    <button class="btn-option">121 to 140 lbs</button>
+                    <button class="btn-option">141 to 160 lbs</button>
+                    <button class="btn-option">161 to 180 lbs</button>
+                    <button class="btn-option">181 to 200 lbs</button>
+                    <button class="btn-option">More than 200 lbs</button>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="question-step" data-question="3">
+                    <div class="question-box">What's your height?</div>
+                    <button class="btn-option">Less than 4'9"</button>
+                    <button class="btn-option">4'9" to 5'2"</button>
+                    <button class="btn-option">5'2" to 5'5"</button>
+                    <button class="btn-option">5'5" to 5'9"</button>
+                    <button class="btn-option">More than 5'9"</button>
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="question-step" data-question="4">
+                    <div class="question-box">How many pounds would you like to lose?</div>
+                    <button class="btn-option">Less than 10 lbs</button>
+                    <button class="btn-option">10 to 20 lbs</button>
+                    <button class="btn-option">21 to 30 lbs</button>
+                    <button class="btn-option">31 to 50 lbs</button>
+                    <button class="btn-option">More than 50 lbs</button>
+                    <button class="btn-option">I don't have a number in mind</button>
+                </div>
+
+                <!-- Pergunta 5 -->
+                <div class="question-step" data-question="5">
+                    <div class="question-box">Which parts do you want to lose fat from?</div>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="body-parts" value="abdomen">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Abdomen</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="body-parts" value="sides">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Sides</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="body-parts" value="arms">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Arms</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="body-parts" value="hips">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Hips</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="body-parts" value="legs">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Legs</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="body-parts" value="other">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Other areas</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Tela de Loading -->
+                <div class="question-step loading-screen" data-question="6">
+                    <h2 class="loading-title">Calculating Your Personalized Formula...</h2>
+                    <p class="loading-description">
+                        Please wait just a few moments while we calculate the <span class="highlight-text">ideal nutrient</span> ratio for your body. We'll fine-tune every ingredient to ensure you get the results you've been craving—starting from Day One!
+                    </p>
+                    
+                    <div class="loading-progress-container">
+                        <div class="loading-progress-bar">
+                            <div class="loading-progress-fill" id="loadingProgressFill"></div>
+                        </div>
+                    </div>
+                    
+                    <p class="loading-time" id="loadingTime">Time remaining: 8 seconds</p>
+                    <p class="loading-status" id="loadingStatus">Calculating BMI and lean mass…</p>
+                </div>
+
+                <!-- Tela de Congratulations -->
+                <div class="question-step congratulations-screen" data-question="7">
+                    <div class="congratulations-content">
+                        <div class="congratulations-text">
+                            <h2 class="congratulations-title">Congratulations!</h2>
+                            <p class="congratulations-paragraph">
+                                Your personalized REDUBURN formula is ready — and it's been custom-made to help you reach your weight and wellness goals faster than ever!
+                            </p>
+                            <p class="congratulations-paragraph">
+                                And there's more: By choosing our 6-jar program, you unlock a MEGA EXCLUSIVE discount.
+                            </p>
+                            <p class="congratulations-paragraph">
+                                This treatment gives your body the time it needs to combat insulin resistance at the root — helping you burn fat more efficiently, stabilize energy levels, and achieve lasting results.
+                            </p>
+                            <p class="congratulations-paragraph">
+                                No more yo-yo dieting. No more wasted effort!
+                            </p>
+                            <p class="congratulations-paragraph">
+                                Ready to start?
+                            </p>
+                            <button class="btn-unlock" id="btnUnlock">Unlock my discount and personalized formula!</button>
+                        </div>
+                        <div class="congratulations-image">
+                            <img src="img/drberg.jpg" alt="Dr. Berg" class="drberg-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela de Ofertas -->
+                <div class="question-step offers-screen" data-question="8">
+                    <h2 class="offers-title">TAKE ADVANTAGE OF SPECIAL OFFERS FOR A LIMITED TIME!</h2>
+                    <div class="offer_container-modal">
+                        <div class="offers-container-modal">
+                            <!-- 6 POTES -->
+                            <div id="best-offer-modal" class="offer offer-6-bottles" style="width:350px;margin:10px;border: 3px solid #ab8700;border-radius: 20px;box-sizing: border-box;padding-bottom: 25px;background: #fffae3;">
+                                <div class="popular-box" style="background-image: linear-gradient(90deg, #ab8700, #fff5cb, #ab8700);color:#000;text-align: center;border-top-left-radius: 10px;border-top-right-radius: 10px;margin: 0;">
+                                    <p style="padding-top: 20px;font-size: 30px;font-weight: 700;margin: 0;">6 BOTTLES</p>
+                                    <p style="padding: 5px 0;font-size: 20px;margin: 0;">180 DAY SUPPLY</p>
+                                </div>
+                                <div style="text-align:center;">
+                                    <img style="width: 100%;margin: 20px 0;" src="img/6potes.png">
+                                    <p style="font-size: 90px;font-weight: 700;color: #000;margin: 0;font-family: 'Montserrat', Sans-serif;">
+                                        <span style="font-size:35px">$</span>49<span style="font-size: 20px;display: inline-block;text-align: left;padding-left: 5px;">per<br>bottle</span>
+                                    </p>
+                                    <p style="font-weight: 700;font-size: 25px;color: #000;">YOU SAVE <span style="color:#00b400">$780</span></p>
+                                    <a class="smartplayer-scroll-event" href="https://rt.bloodsugarcare.online/click/3">
+                                        <img style="width: 100%;margin: 10px 0;padding: 0 20px; animation: pulse 1.5s infinite alternate !important;" src="img/buy-now2.webp">
+                                    </a>
+                                    <img style="width: 100%;padding: 10px" src="img/pay.webp">
+                                    <p style="color: #000;margin-top: 5px;font-size: 20px;font-weight: 700;">*LIMITED OFFER</p>
+                                    <p style="margin: 0;font-weight: 600;font-size: 20px;color: #000;">TOTAL <span style="text-decoration: line-through;color: red;">$1074</span> <b>$294</b></p>
+                                </div>
+                            </div>
+                            <!-- END 6 POTES -->
+                            <!-- 3 POTES -->
+                            <div class="offer offer-3-bottles" style="width:350px;margin:10px;border: 3px solid #000;border-radius: 20px;box-sizing: border-box;padding-bottom: 25px;background: #fffae3;">
+                                <div class="popular-box" style="background-color:#018500;color: #fff;text-align: center;border-top-left-radius: 15px;border-top-right-radius: 15px;margin: 0;">
+                                    <p style="padding-top: 20px;font-size: 30px;font-weight: 700;margin: 0;">3 BOTTLES</p>
+                                    <p style="padding: 5px 0;font-size: 20px;margin: 0;">90 DAY SUPPLY</p>
+                                </div>
+                                <div style="text-align:center;">
+                                    <img style="width: 100%;margin: 20px 0;" src="img/3potes.png">
+                                    <p style="font-size: 90px;font-weight: 700;color: #000;margin: 0;font-family: 'Montserrat', Sans-serif;"><span style="font-size:35px">$</span>59<span style="font-size: 20px;display: inline-block;text-align: left;padding-left: 5px;">per<br>bottle</span></p>
+                                    <p style="font-weight: 700;font-size: 25px;color: #000;">YOU SAVE <span style="color:#00b400">$360</span></p>
+                                    <a href="https://rt.bloodsugarcare.online/click/2">
+                                        <img style="width: 100%;margin: 10px 0;padding: 0 20px;animation: pulse 1.5s infinite alternate !important;" src="img/buy-now2.webp">
+                                    </a>
+                                    <img style="width: 100%;padding: 10px" src="img/pay.webp">
+                                    <p style="color: #000;margin-top: 5px;font-size: 20px;font-weight: 700;">*LIMITED OFFER</p>
+                                    <p style="margin: 0;font-weight: 600;font-size: 20px;color: #000;">TOTAL <span style="text-decoration: line-through;color: red;">$537</span> <b>$177</b></p>
+                                </div>
+                            </div>
+                            <!-- END 3 POTES -->
+                            <!-- 1 POTE -->
+                            <div class="offer offer-1-bottle" style="width:350px;margin:10px;border: 3px solid #000;border-radius: 20px;box-sizing: border-box;padding-bottom: 25px;background: #fffae3;">
+                                <div class="popular-box" style="background-color:#018500;color: #fff;text-align: center;border-top-left-radius: 15px;border-top-right-radius: 15px;margin: 0;">
+                                    <p style="padding-top: 20px;font-size: 30px;font-weight: 700;margin: 0;">1 BOTTLE</p>
+                                    <p style="padding: 5px 0;font-size: 20px;margin: 0;">30 DAY SUPPLY</p>
+                                </div>
+                                <div style="text-align:center;">
+                                    <img style="width: 100%;margin: 20px 0;" src="img/1pote.png">
+                                    <p style="font-size: 90px;font-weight: 700;color: #000;margin: 0;font-family: 'Montserrat', Sans-serif;"><span style="font-size:35px">$</span>79<span style="font-size: 20px;display: inline-block;text-align: left;padding-left: 5px;">per<br>bottle</span></p>
+                                    <p style="font-weight: 700;font-size: 25px;color: #000;">YOU SAVE <span style="color:#00b400">$110</span></p>
+                                    <a href="https://rt.bloodsugarcare.online/click/1">
+                                        <img style="width: 100%;margin: 10px 0;padding: 0 20px;animation: pulse 1.5s infinite alternate !important;" src="img/buy-now2.webp">
+                                    </a>
+                                    <img style="width: 100%;padding: 10px" src="img/pay.webp">
+                                    <p style="color: #000;margin-top: 5px;font-size: 20px;font-weight: 700;">*LIMITED OFFER</p>
+                                    <p style="margin: 0;font-weight: 600;font-size: 20px;color: #000;">TOTAL <span style="text-decoration: line-through;color: red;">$179</span> <b>$79</b></p>
+                                </div>
+                            </div>
+                            <!-- END 1 POTE -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button class="btn-previous" id="btnPrevious">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button class="btn-calculate" id="btnCalculate">Calculate My Formula</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section style="background-color: #f9f9f9;border-radius: 15px;margin:10px auto;" class="main-content">
+        <p id="watching" style="color: #030303;">
+            <span style="color: #606060;font-weight: 600;font-size: 13px;">16,028,111 views · 11 days ago</span>
+        </p>
+        <p id="watching" style="color: #030303;font-size: 14px;"><b>What’s the right way to do the gelatin trick to lose weight fast and effortlessly?</b>
+            <br><br>
+            Today I’m going to show you not only the correct way to prepare this red gelatin recipe to help burn localized fat…
+            <br><br>
+            But also what happens inside your body when you eat this “bariatric-style” dessert…
+            <br><br>
+            And why the famous diets, workouts, and meds don’t have any effect on your weight-loss journey.
+            <br><br>
+            This is your chance to replicate at home the same effect as slimming injections… but without rebound weight gain or loose skin!
+            <br><br>
+            Thanks for watching! 
+            <br><br>
+            I hope this helps you understand better the truth that the pharmaceutical industry will never tell you. I’ll see you in the next video.
+            <br><br>
+            </p>
+    </section>
+
+    <section class="comments-section main-content">
+        <div class="comments-header">
+            <h3 class="comments-count" id="commentsCount">8 comments</h3>
+            <div class="comments-sort">
+                <i class="fas fa-bars"></i>
+                <span>Sort by</span>
+            </div>
+        </div>
+        <div class="comments-list" id="commentsList">
+            <!-- Comments will be added here by JavaScript -->
+        </div>
+    </section>
+    
+    <script src="assets/script.js"></script>
+
+    <script>
+    /* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
+    const delaySeconds = 10;
+    document.addEventListener("DOMContentLoaded", initDelayForHiddenElements);
+    function initDelayForHiddenElements() {
+      const player = document.querySelector("vturb-smartplayer");
+      if (!player) return;
+      player.addEventListener("player:ready", () => {
+        showElementsAfterDelay(player, delaySeconds);
+      });
+    }
+    function showElementsAfterDelay(player, seconds) {
+      player.displayHiddenElements(seconds, [".esconder"], {
+        persist: true
+      });
+    }
+    </script>
+    <script>
+      // Função para converter string com ponto em número real
+      function parseViewers(str) {
+        return parseFloat(str.replace('.', ''));
+      }
+
+      // Função para formatar com ponto a cada milhar
+      function formatViewers(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      }
+
+      let viewers = parseViewers(document.getElementById('count').textContent);
+
+      // Atualiza o contador de forma "orgânica"
+      setInterval(() => {
+        // Incremento aleatório entre 1 e 15 pessoas
+        const increment = Math.floor(Math.random() * 15) + 1;
+        viewers += increment;
+        document.getElementById('count').textContent = formatViewers(viewers);
+      }, 2000); // Atualiza a cada 2 segundos
+    </script>
+
+</body>
+</html>
